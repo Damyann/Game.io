@@ -1,0 +1,211 @@
+/* Добавяне на фон с изображение за цялата страница */
+body {
+    background: url('../Pics/Game-Logo.png') no-repeat center center fixed; /* Пътят трябва да сочи към правилната локация */
+    background-size: cover; /* Покрива цялата площ на екрана */
+    font-family: 'Poppins', sans-serif; /* Запазваме шрифта */
+}
+
+
+/* Основни стилове за header */
+header {
+    background-color: #2c3e50;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-start; /* Всичко е подредено отляво */
+    align-items: center; /* Центрираме вертикално */
+    color: white;
+    width: 63%;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Всичко е подредено отляво */
+    width: 100%;
+}
+
+/* Логото и иконите са подредени на една линия */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Всички елементи ще са подредени отляво */
+    width: 100%;
+}
+
+.logo {
+    margin-right: 25px; /* Малко повече разстояние между логото и иконите */
+}
+
+.logo img {
+    cursor: pointer; /* Показва курсора като ръка при преминаване върху логото */
+    height: 60px; /* Височина на логото */
+}
+
+/* Контейнер за първите две икони */
+.left-icons {
+    display: flex;
+    gap: 10px; /* Намаляваме разстоянието между иконките */
+    margin-right: 55px; /* Добавяме разстояние след първата група икони */
+}
+
+/* Контейнер за последните три икони */
+.info {
+    display: flex;
+    gap: 10px; /* Намаляваме разстоянието между иконките за ден, дата, час */
+}
+
+/* Контейнер за иконата за изход от акаунт */
+.logout-icon {
+    margin-left: auto; /* Тази стойност ще постави иконата най-отдясно */
+}
+
+/* Стил за бутоните на иконите */
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.4s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Определяме размер на иконите */
+.icon-btn {
+    font-size: 25px; /* Размер на иконките */
+}
+
+/* Ховър ефект за иконките */
+.icon-btn:hover {
+    transform: scale(1.2);
+    color: #3498db;
+}
+
+.icon-btn span {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.icon-btn:hover span {
+    color: #3498db;
+}
+
+.icon-btn i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover i {
+    transform: scale(1.2);
+    color: #3498db;
+}
+
+.game-content {
+    margin-top: 100px;
+}
+
+/* Данни за ден, дата, час и т.н. */
+.info span {
+    margin-left: 12px; /* Увеличаваме разстоянието от иконката към текста */
+}
+
+/* Специфични стилове за новите икони */
+#msg {
+    font-size: 25px; /* Размер на иконката за съобщения */
+}
+
+#msg:hover {
+    color: #f39c12;
+    transform: scale(1.3);
+}
+
+#notification {
+    font-size: 25px; /* Размер на иконката за камбанка */
+}
+
+#notification:hover {
+    color: #e74c3c;
+    transform: scale(1.3);
+}
+
+#date {
+    font-size: 25px; /* Размер на иконката за дата */
+}
+
+#date:hover {
+    color: #2ecc71;
+    transform: scale(1.3);
+}
+
+#day {
+    font-size: 25px; /* Размер на иконката за ден от седмицата */
+}
+
+#day:hover {
+    color: #3498db;
+    transform: scale(1.3);
+}
+
+#hour {
+    font-size: 25px; /* Размер на иконката за час */
+}
+
+#hour:hover {
+    color: #f39c12;
+    transform: scale(1.3);
+}
+
+/* Стил за иконата за изход (power_settings_new) */
+#logout {
+    font-size: 30px; /* Размер на иконката за изход */
+    background: none; /* Без фон */
+    border: none; /* Без рамка */
+    color: green; /* Зелено, когато не е ховър */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 700; /* Увеличаваме дебелината на иконата */
+    box-shadow: none; /* Без сянка */
+}
+
+/* Ховър ефект за иконата за изход */
+#logout:hover {
+    transform: scale(1.1); /* Леко уголемяване при ховър */
+    animation: pulse 1.5s ease-in-out infinite; /* Пулсиране при ховър */
+    color: red; /* Червен цвят за иконата при ховър */
+}
+
+/* Пулсираща анимация */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Иконата започва със стандартен размер */
+        color: red; /* Иконата свети в червено при началото на пулсацията */
+    }
+    50% {
+        transform: scale(1.2); /* Увеличаваме размера на иконата при пулсацията */
+        color: red; /* Иконата остава червена */
+    }
+    100% {
+        transform: scale(1); /* Връщаме я към нормален размер */
+        color: red; /* Иконата остава червена */
+    }
+}
+
+/* Стил за самата икона */
+#logout i {
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 700; /* Увеличаваме дебелината на самата икона */
+}
+
+/* Ховър ефект за иконата */
+#logout:hover i {
+    color: rgb(255, 43, 43); /* Променяме цвета на иконата на бяло при ховър */
+}
+

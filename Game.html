@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Игра</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="game.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Логото -->
+      <div class="logo">
+        <img src="../Pics/Logo.png" alt="Game Logo" />
+      </div>
+
+      <!-- Икони (съобщения и камбанка) наляво -->
+      <div class="left-icons">
+        <button class="icon-btn" id="msg"><i class="fas fa-comment-dots"></i></button> <!-- Иконка за съобщения -->
+        <button class="icon-btn" id="notification"><i class="fas fa-bell"></i></button> <!-- Иконка за камбанка -->
+      </div>
+
+      <!-- Икони (не-бутони) -->
+      <div class="info">
+        <button class="icon-btn" id="date"><i class="fas fa-calendar-alt"></i><span id="date-info"></span></button> <!-- Иконка за дата -->
+        <button class="icon-btn" id="day"><i class="fas fa-calendar-day"></i><span id="day-info"></span></button> <!-- Иконка за ден от седмицата -->
+        <button class="icon-btn" id="hour"><i class="fas fa-clock"></i><span id="time-info"></span></button> <!-- Иконка за час -->
+      </div>
+
+      <!-- Икона за изход от акаунт в отделен клас -->
+      <div class="logout-icon">
+        <button class="icon-btn" id="logout"><i class="material-icons">power_settings_new</i></button> <!-- Икона за изход (power_settings_new) -->
+      </div>
+    </div>
+  </header>
+
+  <div class="game-content">
+    <!-- Игрово съдържание ще бъде тук -->
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
